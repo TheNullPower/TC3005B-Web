@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Contacto</title>
+        <style>
+            label, input, textarea {
+                display: block;
+                margin-bottom: 10px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <form id="contactForm">
+            <label for="subject">Asunto:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" name="comments" required></textarea>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <hr>
+        <div id="confirmationMessage" style="display: none;"></div>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const subject = document.getElementById('subject').value;
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+
+                const confirmationMessage = document.getElementById('confirmationMessage');
+                confirmationMessage.innerHTML = `Gracias por sus comentarios ${name}, te contactaremos a ${email} en caso de ser necesario.`;
+                confirmationMessage.style.display = 'block';
+
+                document.getElementById('subject').value = '';
+                document.getElementById('name').value = '';
+                document.getElementById('comments').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('phone').value = '';
+            });
+        </script>
+    </body>
+</html>

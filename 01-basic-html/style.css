@@ -1,0 +1,37 @@
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#title{
+    color: black;
+    background-color: white;
+}
+
+a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+#mispasatiempos {
+    text-align:start;
+}
+
+#mishabilidades {
+    text-align:start;
+}
+
+form {
+    text-align: start;
+}
+
+img {
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #eb4034;
+}
