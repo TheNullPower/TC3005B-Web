@@ -1,3 +1,8 @@
+# Status
+
+![Tests](https://github.com/abrahamgr/web-app-learning/actions/workflows/test-coverage.yml/badge.svg)
+[![codecov](https://codecov.io/github/abrahamgr/web-app-learning/graph/badge.svg?token=Y610BS6YGU)](https://codecov.io/github/abrahamgr/web-app-learning)
+
 ## Zod
 
 [https://zod.dev/](https://zod.dev/)
@@ -115,7 +120,7 @@ Add the scipts below to the `package.json` in the `scripts` section
 // .eslintrc.json
 {
   "lint": "next lint",
-  "lint:": "next lint --fix"
+  "lint:fix": "next lint --fix"
 }
 ```
 
